@@ -1,22 +1,22 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import heroImage from '../assets/hero.png'
 </script>
 
 <template>
-  <section id="home" class="hero min-h-screen bg-base-200">
-    <div class="hero-content text-center">
-      <div class="max-w-xl space-y-6">
-        <h1 class="text-4xl font-bold">به داریوش خوش آمدید</h1>
-        <p class="text-base-content/70">
-          این یک صفحه فرود ساده است که با استفاده از
-          <span class="font-semibold">daisyUI</span>
-          و <span class="font-semibold">Tailwind CSS</span> ساخته شده تا بتوانید به سرعت رابط‌های
-          کاربری زیبا ایجاد کنید.
+  <section
+    id="home"
+    class="hero min-h-screen bg-cover bg-center"
+    :style="{ backgroundImage: `url(${heroImage})` }"
+  >
+    <div class="hero-overlay bg-neutral/60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-xl">
+        <h1 class="mb-5 text-5xl font-bold">کابینت و دکوراسیون داریوش</h1>
+        <p class="mb-5 text-lg">
+          با بهره‌گیری از طراحی‌های مدرن و متریال باکیفیت، فضایی ماندگار و دلنشین برای خانه یا محل کارتان
+          خلق می‌کنیم.
         </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <RouterLink to="/blog" class="btn btn-primary">مشاهده بلاگ</RouterLink>
-          <button type="button" class="btn btn-outline">شروع کنید</button>
-        </div>
+        <button type="button" class="btn btn-primary">مشاوره رایگان</button>
       </div>
     </div>
   </section>
