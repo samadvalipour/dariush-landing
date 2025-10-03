@@ -1,6 +1,9 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import logo from "../assets/logo-black.svg";
+import instagram from "../assets/instagram.svg";
+import divar from "../assets/divar.svg";
+import phone from "../assets/phone.svg";
 
 const links = [
   { href: "/", label: "صفحه اصلی" },
@@ -39,11 +42,6 @@ onBeforeUnmount(() => {
   <header class="bg-base-100 shadow-sm">
     <div class="navbar bg-base-100">
       <div class="container mx-auto flex flex-row items-center justify-between gap-4">
-        <!-- لوگو -->
-        <a href="/" class="btn btn-ghost normal-case text-xl">
-          <img :src="logo" alt="لوگو" class="h-10 w-auto" />
-        </a>
-
         <!-- دکمه منوی موبایل -->
         <button
           type="button"
@@ -66,6 +64,23 @@ onBeforeUnmount(() => {
             />
           </svg>
         </button>
+
+        <!-- لوگو -->
+        <a href="/" class="btn btn-ghost normal-case text-xl">
+          <img :src="logo" alt="لوگو" class="h-10 w-auto" />
+        </a>
+
+        <div class="hidden lg:flex flex-horizental gap-2">
+          <a href="" class="btn btn-circle btn-ghost">
+            <img :src="instagram" alt="ارتباط با ما در اینستاگرام" class="h-5" />
+          </a>
+          <a href="" class="btn btn-circle btn-ghost">
+            <img :src="divar" alt="ارتباط با ما دیوار" class="h-5" />
+          </a>
+          <a href="" class="btn btn-circle btn-ghost">
+            <img :src="phone" alt="تماس با ما" class="h-5" />
+          </a>
+        </div>
       </div>
     </div>
 
