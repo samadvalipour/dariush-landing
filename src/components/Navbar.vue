@@ -39,8 +39,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="bg-base-100 shadow-sm">
-    <div class="navbar bg-base-100">
+  <header class=" z-1 rounded-box border-none bg-base-100/90 backdrop-blur fixed !w-auto top-4 right-4 left-4">
+    <div class="navbar">
       <div class="container mx-auto flex flex-row items-center justify-between gap-4">
         <!-- دکمه منوی موبایل -->
         <button
@@ -67,24 +67,24 @@ onBeforeUnmount(() => {
 
         <!-- لوگو -->
         <a href="/" class="btn btn-ghost normal-case text-xl">
-          <img :src="logo" alt="لوگو" class="h-10 w-auto" />
+          <img :src="logo" alt="لوگو" class="h-7 md:h-10 w-auto" />
         </a>
 
         <div class="hidden lg:flex flex-horizental gap-2">
           <a href="" class="btn btn-circle btn-ghost">
-            <img :src="instagram" alt="ارتباط با ما در اینستاگرام" class="h-5" />
+            <img :src="instagram" alt="ارتباط با ما در اینستاگرام" class="h-8" />
           </a>
           <a href="" class="btn btn-circle btn-ghost">
-            <img :src="divar" alt="ارتباط با ما دیوار" class="h-5" />
+            <img :src="divar" alt="ارتباط با ما دیوار" class="h-8" />
           </a>
           <a href="" class="btn btn-circle btn-ghost">
-            <img :src="phone" alt="تماس با ما" class="h-5" />
+            <img :src="phone" alt="تماس با ما" class="h-8" />
           </a>
         </div>
       </div>
     </div>
 
-    <div class="border-t border-base-200 bg-base-100">
+    <div class="border-t border-base-200 rounded-box">
       <div class="container mx-auto justify-center">
         <!-- منوی دسکتاپ -->
         <ul class="menu menu-horizontal hidden justify-end gap-2 py-2 lg:flex">

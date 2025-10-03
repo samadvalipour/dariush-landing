@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <section id="home" class="hero min-h-[calc(100vh-5rem)] bg-base-200">
+  <section id="home" class="hero min-h-screen bg-base-200">
     <div class="hero-content text-center">
       <div class="max-w-xl space-y-6">
         <h1 class="text-4xl font-bold">به داریوش خوش آمدید</h1>

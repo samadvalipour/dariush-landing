@@ -50,19 +50,16 @@ const dockItems = computed(() =>
 </script>
 
 <template>
-  <nav class="dock rounded-box bg-base-100/80 backdrop-blur" aria-label="لینک های شبکه اجتماعی">
+  <nav class="lg:hidden dock rounded-box border-none bg-base-100/90 backdrop-blur w-auto bottom-4 right-4 left-4" aria-label="لینک های شبکه اجتماعی">
     <a
       v-for="item in dockItems"
       :key="item.id"
       :href="item.href"
       class="dock-item"
-      :class="{ 'dock-active': item.isActive }"
       :target="item.external ? '_blank' : undefined"
       :rel="item.external ? 'noopener noreferrer' : undefined"
-      :aria-label="item.label"
     >
-      <img :src="item.icon" :alt="item.alt" class="size-[1.2em]" />
-      <span class="dock-label">{{ item.label }}</span>
+      <img :src="item.icon" :alt="item.alt" class="size-[2em]" />
     </a>
   </nav>
 </template>
