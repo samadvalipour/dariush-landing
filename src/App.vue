@@ -1,30 +1,54 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="app">
+    <nav class="app__nav">
+      <RouterLink to="/" class="app__link">خانه</RouterLink>
+      <RouterLink to="/blog" class="app__link">بلاگ</RouterLink>
+    </nav>
+    <main class="app__content">
+      <RouterView />
+    </main>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.app__nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #111827;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.app__link {
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 150ms ease-in-out;
+}
+
+.app__link.router-link-active {
+  opacity: 1;
+}
+
+.app__link:not(.router-link-active) {
+  opacity: 0.7;
+}
+
+.app__link:hover {
+  opacity: 1;
+}
+
+.app__content {
+  flex: 1;
 }
 </style>
