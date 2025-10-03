@@ -1,30 +1,18 @@
 <template>
-  <section class="home">
-    <button type="button" class="home__button">خانه</button>
+  <section class="hero min-h-[calc(100vh-5rem)] bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-xl space-y-6">
+        <h1 class="text-4xl font-bold">به داریوش خوش آمدید</h1>
+        <p class="text-base-content/70">
+          این یک صفحه فرود ساده است که با استفاده از <span class="font-semibold">daisyUI</span>
+          و <span class="font-semibold">Tailwind CSS</span> ساخته شده تا بتوانید به سرعت رابط‌های
+          کاربری زیبا ایجاد کنید.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <RouterLink to="/blog" class="btn btn-primary">مشاهده بلاگ</RouterLink>
+          <button type="button" class="btn btn-outline">شروع کنید</button>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
-
-<style scoped>
-.home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5f5f5;
-}
-
-.home__button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #1e40af;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 150ms ease-in-out;
-}
-
-.home__button:hover {
-  background-color: #1d4ed8;
-}
-</style>

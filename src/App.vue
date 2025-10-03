@@ -1,54 +1,36 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const navigationLinks = [
+  { to: '/', label: 'خانه' },
+  { to: '/blog', label: 'بلاگ' }
+]
 </script>
 
 <template>
-  <div class="app">
-    <nav class="app__nav">
-      <RouterLink to="/" class="app__link">خانه</RouterLink>
-      <RouterLink to="/blog" class="app__link">بلاگ</RouterLink>
+  <div class="flex min-h-screen flex-col bg-base-200 text-base-content">
+    <nav class="navbar bg-base-100 shadow">
+      <div class="container mx-auto flex flex-wrap items-center justify-between gap-4">
+        <RouterLink to="/" class="btn btn-ghost text-xl font-bold normal-case">
+          داریوش
+        </RouterLink>
+        <div class="flex flex-wrap gap-2">
+          <RouterLink
+            v-for="link in navigationLinks"
+            :key="link.to"
+            :to="link.to"
+            class="btn btn-ghost btn-sm"
+            :class="{ 'btn-active': route.path === link.to }"
+          >
+            {{ link.label }}
+          </RouterLink>
+        </div>
+      </div>
     </nav>
-    <main class="app__content">
+    <main class="flex-1">
       <RouterView />
     </main>
   </div>
 </template>
-
-<style scoped>
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.app__nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  padding: 1.5rem;
-  background-color: #111827;
-}
-
-.app__link {
-  color: #f9fafb;
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 150ms ease-in-out;
-}
-
-.app__link.router-link-active {
-  opacity: 1;
-}
-
-.app__link:not(.router-link-active) {
-  opacity: 0.7;
-}
-
-.app__link:hover {
-  opacity: 1;
-}
-
-.app__content {
-  flex: 1;
-}
-</style>
