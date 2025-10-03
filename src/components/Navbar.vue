@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 const links = [
   { href: '/', label: 'صفحه اصلی' },
@@ -18,83 +18,48 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false
 }
-
-const handleResize = () => {
-  if (window.innerWidth >= 1024) {
-    isMenuOpen.value = false
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('resize', handleResize)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleResize)
-})
 </script>
 
 <template>
-  <header class="bg-base-100 shadow-sm">
-    <div class="navbar bg-base-100">
-      <div class="container mx-auto flex flex-row-reverse items-center justify-between gap-4">
-        <a href="/" class="btn btn-ghost text-xl font-bold normal-case">
-          daisyUI
-        </a>
+  <div class="navbar bg-base-100 shadow-sm">
+    <!-- بخش شروع -->
+    <div class="flex-none">
+      <!-- منوی موبایل -->
+      <div class="dropdown">
         <button
-          type="button"
-          class="btn btn-ghost btn-circle lg:hidden"
-          aria-label="toggle navigation menu"
+          tabindex="0"
+          role="button"
+          class="btn btn-ghost lg:hidden"
           @click="toggleMenu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="h-6 w-6"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-      </div>
-    </div>
-
-    <div class="border-t border-base-200 bg-base-100">
-      <div class="container mx-auto">
-        <ul class="menu menu-horizontal hidden justify-end gap-2 py-2 lg:flex">
+        <ul
+          v-if="isMenuOpen"
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+        >
           <li v-for="link in links" :key="link.href">
-            <a :href="link.href" class="rounded-btn px-4 py-2 font-medium">
-              {{ link.label }}
-            </a>
+            <a :href="link.href" @click="closeMenu">{{ link.label }}</a>
           </li>
         </ul>
-
-        <transition name="fade">
-          <ul
-            v-if="isMenuOpen"
-            class="menu menu-vertical gap-2 py-4 lg:hidden"
-          >
-            <li v-for="link in links" :key="link.href">
-              <a :href="link.href" class="rounded-btn px-4 py-2 font-medium" @click="closeMenu">
-                {{ link.label }}
-              </a>
-            </li>
-          </ul>
-        </transition>
       </div>
+
+      <!-- لوگو -->
+      <a href="/" class="btn btn-ghost text-xl">daisyUI</a>
     </div>
-  </header>
+
+    <!-- بخش وسط (لینک‌ها در دسکتاپ) -->
+    <div class="grow hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li v-for="link in links" :key="link.href">
+          <a :href="link.href">{{ link.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
