@@ -11,10 +11,8 @@
         class="btn btn-primary px-8"
         href="#contact"
       >
-        درخواست مشاوره رایگان
+       برای مشاوره رایگان با ما تماس بگیرید
       </a>
     </div>
-    <div class="pointer-events-none absolute -left-16 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
-    <div class="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" />
   </div>
 </template>

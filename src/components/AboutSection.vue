@@ -8,26 +8,23 @@ const stats = [
     label: 'سال تجربه',
     value: '+15',
     subtitle: 'سابقه حرفه‌ای در تولید و نصب کابینت و دکوراسیون داخلی',
-    description: 'تجربه',
   },
   {
     label: 'پروژه‌های اجرا شده',
     value: '+900',
     subtitle: 'پروژه‌های موفق در استان البرز، تهران و شهرهای اطراف',
-    description: 'اعتماد',
   },
   {
     label: 'برندهای همکار',
     value: '+15',
     subtitle: 'همکاری با برندهای معتبر تجهیزات آشپزخانه و درب‌های ضدسرقت',
-    description: 'کیفیت',
   },
 ]
 </script>
 
 <template>
-  <section id="about" class="container mx-auto px-4">
-    <div class="grid gap-12 rounded-3xl bg-base-200/80 p-10 shadow-lg backdrop-blur lg:grid-cols-[1.1fr_1fr] lg:items-start">
+  <section id="about">
+    <div class="grid gap-12 bg-base-200/80 p-10 backdrop-blur lg:grid-cols-[1.1fr_1fr] lg:items-start">
       <DariushIntro />
       <div class="flex flex-col gap-8">
         <StatsGrid :stats="stats" />
