@@ -50,7 +50,7 @@ const dockItems = computed(() =>
 </script>
 
 <template>
-  <nav class="lg:hidden dock rounded-box border-none bg-base-100/90 backdrop-blur w-auto bottom-4 right-4 left-4" aria-label="لینک های شبکه اجتماعی">
+  <nav class="lg:hidden dock rounded-box border border-gray-300/40 bg-base-100 shadow-md backdrop-blur w-auto bottom-4 right-4 left-4" aria-label="لینک های شبکه اجتماعی">
     <a
       v-for="item in dockItems"
       :key="item.id"
