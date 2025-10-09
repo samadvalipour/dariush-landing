@@ -1,28 +1,34 @@
+<script setup>
+import ConsultationCTA from './ConsultationCTA.vue'
+import DariushIntro from './DariushIntro.vue'
+import StatsGrid from './StatsGrid.vue'
+
+const stats = [
+  {
+    label: 'سال تجربه',
+    value: '+15',
+    subtitle: 'سابقه حرفه‌ای در تولید و نصب کابینت و دکوراسیون داخلی',
+  },
+  {
+    label: 'پروژه‌های اجرا شده',
+    value: '+900',
+    subtitle: 'پروژه‌های موفق در استان البرز، تهران و شهرهای اطراف',
+  },
+  {
+    label: 'برندهای همکار',
+    value: '+15',
+    subtitle: 'همکاری با برندهای معتبر تجهیزات آشپزخانه و درب‌های ضدسرقت',
+  },
+]
+</script>
+
 <template>
-  <section id="about" class="container mx-auto px-4">
-    <div class="grid gap-10 rounded-2xl bg-base-200 p-10 lg:grid-cols-2 lg:items-center">
-      <div class="space-y-4">
-        <h2 class="text-3xl font-bold">درباره ما</h2>
-        <p class="text-base-content/70">
-          ما تیمی از طراحان، توسعه‌دهندگان و استراتژیست‌های پرشور هستیم که به ارائه راهکارهای نوآورانه
-          برای برندها و کسب‌وکارهای رو به رشد متعهدیم.
-        </p>
-      </div>
-      <div class="flex justify-center">
-        <div class="stats stats-vertical shadow lg:stats-horizontal">
-          <div class="stat">
-            <div class="stat-title">سال تجربه</div>
-            <div class="stat-value">۸+</div>
-          </div>
-          <div class="stat">
-            <div class="stat-title">مشتریان خوشحال</div>
-            <div class="stat-value">۱۲۰+</div>
-          </div>
-          <div class="stat">
-            <div class="stat-title">پروژه‌های موفق</div>
-            <div class="stat-value">۳۰۰+</div>
-          </div>
-        </div>
+  <section id="about">
+    <div class="grid gap-12 bg-base-200/80 p-10 backdrop-blur lg:grid-cols-[1.1fr_1fr] lg:items-start">
+      <DariushIntro />
+      <div class="flex flex-col gap-8">
+        <StatsGrid :stats="stats" />
+        <ConsultationCTA />
       </div>
     </div>
   </section>
