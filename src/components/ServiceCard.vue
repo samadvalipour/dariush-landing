@@ -1,6 +1,6 @@
 <template>
   <article
-    class="card h-full w-full bg-base-100 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+    class="card h-full w-full bg-base-100 border border-gray-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
   >
     <figure class="h-48 w-full overflow-hidden rounded-t-2xl">
       <img

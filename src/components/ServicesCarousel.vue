@@ -4,7 +4,7 @@
       <header class="space-y-4 text-center">
         <span class="badge badge-secondary badge-outline">خدمات ما</span>
         <h2 class="text-3xl font-bold text-base-content sm:text-4xl">
-          تخصص ما در خدمت زیبایی فضای شماست
+          تخصص ما، در خدمت زیبایی فضای شماست
         </h2>
         <p class="mx-auto max-w-3xl text-base leading-relaxed text-base-content/70">
           مجموعه‌ای کامل از خدمات طراحی و اجرای دکوراسیون داخلی برای خانه و محل کارتان.
