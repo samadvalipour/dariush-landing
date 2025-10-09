@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class=" z-1 rounded-box border-none bg-base-100/90 backdrop-blur fixed !w-auto top-4 right-4 left-4">
+  <header class=" z-1 rounded-box border border-gray-300/40 shadow-md bg-base-100 backdrop-blur fixed !w-auto top-4 right-4 left-4">
     <div class="navbar">
       <div class="container mx-auto flex flex-row items-center justify-between gap-4">
         <!-- دکمه منوی موبایل -->
@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <div class="border-t border-base-200 rounded-box">
+    <div class="border-t border-gray-300/40 rounded-b-box">
       <div class="container mx-auto justify-center">
         <!-- منوی دسکتاپ -->
         <ul class="menu menu-horizontal hidden justify-end gap-2 py-2 lg:flex">
