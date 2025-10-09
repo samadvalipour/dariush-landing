@@ -3,7 +3,7 @@ import AboutSection from '../components/AboutSection.vue'
 import ContactSection from '../components/ContactSection.vue'
 import Dock from '../components/Dock.vue'
 import HeroSection from '../components/HeroSection.vue'
-import ProductsSection from '../components/ProductsSection.vue'
+import ProductsCarousel from '../components/ProductsCarousel.vue'
 import ServicesCarousel from '../components/ServicesCarousel.vue'
 </script>
 
@@ -12,7 +12,7 @@ import ServicesCarousel from '../components/ServicesCarousel.vue'
     <main class="space-y-24">
       <HeroSection />
       <ServicesCarousel />
-      <ProductsSection />
+      <ProductsCarousel />
       <AboutSection />
       <ContactSection />
     </main>
