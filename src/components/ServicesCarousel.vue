@@ -14,12 +14,12 @@
 
       <div class="relative">
         <div
-          class="carousel carousel-center w-full space-x-6 overflow-x-auto rounded-2xl bg-base-200/60 p-6 snap-x snap-mandatory scroll-smooth"
+          class="carousel carousel-center w-full space-x-6 overflow-x-auto rounded-2xl bg-base-200/60 p-6 snap-x snap-mandatory scroll-smooth sm:hidden"
         >
           <div
             v-for="service in services"
             :key="service.title"
-            class="carousel-item w-full flex-shrink-0 snap-start sm:w-1/2 lg:w-1/3"
+            class="carousel-item w-full flex-shrink-0 snap-start"
           >
             <ServiceCard
               :title="service.title"
@@ -27,6 +27,16 @@
               :image="service.image"
             />
           </div>
+        </div>
+
+        <div class="hidden w-full gap-6 rounded-2xl bg-base-200/60 p-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+          <ServiceCard
+            v-for="service in services"
+            :key="service.title"
+            :title="service.title"
+            :desc="service.desc"
+            :image="service.image"
+          />
         </div>
       </div>
     </div>
