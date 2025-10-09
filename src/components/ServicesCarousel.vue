@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="bg-base-100 py-16">
+  <section id="services" class="bg-base-200 py-16">
     <div class="container mx-auto flex flex-col gap-10 px-4">
       <header class="space-y-4 text-center">
         <span class="badge badge-secondary badge-outline">خدمات ما</span>
@@ -15,7 +15,7 @@
       <div class="relative">
         <div
           ref="carouselRef"
-          class="carousel carousel-center w-full space-x-6 overflow-x-auto rounded-2xl bg-base-200/60 p-6 snap-x snap-mandatory scroll-smooth sm:hidden"
+          class="carousel carousel-center w-full space-x-6 overflow-x-auto rounded-2xl bg-base-100/70  p-6 snap-x snap-mandatory scroll-smooth sm:hidden"
           @scroll="updateActiveIndex"
         >
           <div
