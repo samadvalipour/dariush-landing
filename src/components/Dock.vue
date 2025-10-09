@@ -1,9 +1,9 @@
 <script setup>
 import { computed } from "vue";
-import baladIcon from "../assets/balad.svg";
-import divarIcon from "../assets/divar.svg";
-import instagramIcon from "../assets/instagram.svg";
-import neshanIcon from "../assets/neshan.svg";
+import baladIcon from "../assets/svg/balad_bw.svg";
+import divarIcon from "../assets/svg/divar_bw.svg";
+import instagramIcon from "../assets/svg/instagram_bw.svg";
+import neshanIcon from "../assets/svg/neshan_bw.svg";
 import { PhoneIcon } from "../utils/lucide-icons";
 
 const props = defineProps({
@@ -75,7 +75,7 @@ const dockItems = computed(() =>
 
 <template>
   <nav
-    class="dock w-auto rounded-box border border-gray-300/40 bg-base-100/95 shadow-md backdrop-blur lg:hidden"
+    class="dock w-auto rounded-box border border-gray-300/40 bottom-4 left-4 right-4 bg-base-100/95 shadow-md backdrop-blur lg:hidden"
     aria-label="لینک‌های دسترسی سریع"
   >
     <a
@@ -87,11 +87,9 @@ const dockItems = computed(() =>
       :rel="item.external ? 'noopener noreferrer' : undefined"
       :aria-label="item.alt || item.label"
     >
-      <span
-        class="flex size-[2.4em] items-center justify-center rounded-2xl bg-base-100 text-base-content shadow-sm"
-      >
+      <span class="flex size-[2.4em] items-center justify-center text-base-content">
         <template v-if="item.type === 'asset'">
-          <img :src="item.icon" :alt="item.alt || item.label" class="size-6" />
+          <img :src="item.icon" :alt="item.alt || item.label" class="size-10" />
         </template>
         <component v-else :is="item.icon" class="size-6" />
       </span>

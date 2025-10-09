@@ -9,14 +9,14 @@ import ServicesCarousel from '../components/ServicesCarousel.vue'
 
 <template>
   <div class="bg-base-100">
-    <main class="space-y-24">
+    <main class="space-y-24 pb-10">
       <HeroSection />
       <ServicesCarousel />
       <ProductsCarousel />
       <AboutSection />
       <ContactSection />
     </main>
-    <div class="flex justify-center pb-12">
+    <div class="flex justify-center">
       <Dock />
     </div>
   </div>
