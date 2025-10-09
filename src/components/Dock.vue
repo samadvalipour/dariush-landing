@@ -1,19 +1,40 @@
 <script setup>
 import { computed } from "vue";
-import instagramIcon from "../assets/instagram.svg";
+import baladIcon from "../assets/balad.svg";
 import divarIcon from "../assets/divar.svg";
-import phoneIcon from "../assets/phone.svg";
+import instagramIcon from "../assets/instagram.svg";
+import neshanIcon from "../assets/neshan.svg";
+import { PhoneIcon } from "../utils/lucide-icons";
 
 const props = defineProps({
   links: {
     type: Array,
     default: () => [
       {
+        id: "neshan",
+        label: "مسیر در نشان",
+        href: "https://neshan.org/maps/places/dariush-decor",
+        icon: neshanIcon,
+        alt: "مسیر کارگاه در نشان",
+        type: "asset",
+        external: true,
+      },
+      {
+        id: "balad",
+        label: "مسیر در بلد",
+        href: "https://balad.ir/p/dariush-decor",
+        icon: baladIcon,
+        alt: "مسیر کارگاه در بلد",
+        type: "asset",
+        external: true,
+      },
+      {
         id: "instagram",
         label: "اینستاگرام",
         href: "https://www.instagram.com/",
         icon: instagramIcon,
         alt: "صفحه اینستاگرام داریوش",
+        type: "asset",
         external: true,
       },
       {
@@ -22,14 +43,16 @@ const props = defineProps({
         href: "https://divar.ir/",
         icon: divarIcon,
         alt: "صفحه دیوار داریوش",
+        type: "asset",
         external: true,
       },
       {
-        id: "contact",
-        label: "تماس",
-        href: "/#contact",
-        icon: phoneIcon,
-        alt: "ارتباط با داریوش",
+        id: "phone",
+        label: "تماس تلفنی",
+        href: "tel:09123456789",
+        icon: PhoneIcon,
+        alt: "تماس تلفنی مستقیم",
+        type: "component",
         external: false,
       },
     ],
@@ -45,12 +68,16 @@ const dockItems = computed(() =>
     ...item,
     isActive: item.id === props.active,
     external: item.external ?? true,
+    type: item.type ?? "asset",
   }))
 );
 </script>
 
 <template>
-  <nav class="lg:hidden dock rounded-box border border-gray-300/40 bg-base-100 shadow-md backdrop-blur w-auto bottom-4 right-4 left-4" aria-label="لینک های شبکه اجتماعی">
+  <nav
+    class="dock w-auto rounded-box border border-gray-300/40 bg-base-100/95 shadow-md backdrop-blur lg:hidden"
+    aria-label="لینک‌های دسترسی سریع"
+  >
     <a
       v-for="item in dockItems"
       :key="item.id"
@@ -58,8 +85,16 @@ const dockItems = computed(() =>
       class="dock-item"
       :target="item.external ? '_blank' : undefined"
       :rel="item.external ? 'noopener noreferrer' : undefined"
+      :aria-label="item.alt || item.label"
     >
-      <img :src="item.icon" :alt="item.alt" class="size-[2em]" />
+      <span
+        class="flex size-[2.4em] items-center justify-center rounded-2xl bg-base-100 text-base-content shadow-sm"
+      >
+        <template v-if="item.type === 'asset'">
+          <img :src="item.icon" :alt="item.alt || item.label" class="size-6" />
+        </template>
+        <component v-else :is="item.icon" class="size-6" />
+      </span>
     </a>
   </nav>
 </template>
