@@ -10,14 +10,14 @@ const contactDetails = [
   {
     id: "phone",
     label: "تلفن تماس مستقیم",
-    value: "0912 345 6789",
-    href: "tel:09123456789",
+    value: "0912 765 8701",
+    href: "tel:09127658701",
     icon: PhoneIcon,
   },
   {
     id: "address",
     label: "آدرس کارگاه و دفتر",
-    value: "هشتگرد – خیابان نمونه – کارگاه دکوراسیون داریوش",
+    value: "استان البرز، اتوبان کرج به قزوین (آزاد راه شهید فلاحی)، شهر هشتگرد، ینگه امام، میدان شورا (چسبیده به اتوبان)",
     icon: MapPinIcon,
   },
   {
@@ -32,21 +32,21 @@ const quickActions = [
   {
     id: "neshan",
     label: "مسیریابی در نشان",
-    href: "https://neshan.org/maps/places/dariush-decor",
+    href: "https://nshn.ir/f2_bvTH6pxSrb5",
     icon: neshanIcon,
     type: "asset",
   },
   {
     id: "balad",
     label: "مسیریابی در بلد",
-    href: "https://balad.ir/p/dariush-decor",
+    href: "https://balad.ir/p/Ptp5Hc4Kk1tN6s",
     icon: baladIcon,
     type: "asset",
   },
   {
     id: "instagram",
     label: "صفحه اینستاگرام ما",
-    href: "https://www.instagram.com/",
+    href: "http://www.instagram.com/dariushdecor.ir",
     icon: instagramIcon,
     type: "asset",
   },
@@ -60,7 +60,7 @@ const quickActions = [
   {
     id: "phone",
     label: "تماس تلفنی مستقیم",
-    href: "tel:09123456789",
+    href: "tel:09127658701",
     icon: PhoneIcon,
     type: "component",
   },
