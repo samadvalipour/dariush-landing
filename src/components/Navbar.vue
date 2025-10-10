@@ -1,9 +1,11 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import logo from "../assets/logo-black.svg";
-import instagram from "../assets/instagram.svg";
-import divar from "../assets/divar.svg";
-import phone from "../assets/phone.svg";
+import baladIcon from "../assets/svg/balad_bw.svg";
+import divarIcon from "../assets/svg/divar_bw.svg";
+import instagramIcon from "../assets/svg/instagram_bw.svg";
+import neshanIcon from "../assets/svg/neshan_bw.svg";
+import PhoneIcon from "../assets/svg/phone_bw.svg";
 
 const links = [
   { href: "/", label: "صفحه اصلی" },
@@ -72,13 +74,19 @@ onBeforeUnmount(() => {
 
         <div class="hidden lg:flex flex-horizental gap-2">
           <a href="" class="btn btn-circle btn-ghost">
-            <img :src="instagram" alt="ارتباط با ما در اینستاگرام" class="h-8" />
+            <img :src="instagramIcon" alt="ارتباط با ما در اینستاگرام" class="h-8" />
           </a>
           <a href="" class="btn btn-circle btn-ghost">
-            <img :src="divar" alt="ارتباط با ما دیوار" class="h-8" />
+            <img :src="divarIcon" alt="ارتباط با ما در دیوار" class="h-8" />
           </a>
           <a href="" class="btn btn-circle btn-ghost">
-            <img :src="phone" alt="تماس با ما" class="h-8" />
+            <img :src="PhoneIcon" alt="تماس با ما" class="h-8" />
+          </a>
+          <a href="" class="btn btn-circle btn-ghost">
+            <img :src="neshanIcon" alt="مسیریابی در نشان" class="h-8" />
+          </a>
+          <a href="" class="btn btn-circle btn-ghost">
+            <img :src="baladIcon" alt="مسیریابی در بلد" class="h-8" />
           </a>
         </div>
       </div>

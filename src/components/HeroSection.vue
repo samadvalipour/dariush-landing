@@ -16,7 +16,7 @@ import heroImage from '../assets/hero.png'
           با بهره‌گیری از طراحی‌های مدرن و متریال باکیفیت، فضایی ماندگار و دلنشین برای خانه یا محل کارتان
           خلق می‌کنیم.
         </p>
-        <button type="button" class="btn btn-primary">مشاوره رایگان</button>
+        <a href= "/#contact" class="btn btn-secondary">مشاوره رایگان</a>
       </div>
     </div>
   </section>
