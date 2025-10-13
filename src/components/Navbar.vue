@@ -73,19 +73,19 @@ onBeforeUnmount(() => {
         </a>
 
         <div class="hidden lg:flex flex-horizental gap-2">
-          <a href="" class="btn btn-circle btn-ghost">
+          <a href="http://www.instagram.com/dariushdecor.ir" class="btn btn-circle btn-ghost">
             <img :src="instagramIcon" alt="ارتباط با ما در اینستاگرام" class="h-8" />
           </a>
-          <a href="" class="btn btn-circle btn-ghost">
+          <a href="https://divar.ir/pro/weMYJqef" class="btn btn-circle btn-ghost">
             <img :src="divarIcon" alt="ارتباط با ما در دیوار" class="h-8" />
           </a>
-          <a href="" class="btn btn-circle btn-ghost">
+          <a href="tel:09127658701" class="btn btn-circle btn-ghost">
             <img :src="PhoneIcon" alt="تماس با ما" class="h-8" />
           </a>
-          <a href="" class="btn btn-circle btn-ghost">
+          <a href="https://nshn.ir/f2_bvTH6pxSrb5" class="btn btn-circle btn-ghost">
             <img :src="neshanIcon" alt="مسیریابی در نشان" class="h-8" />
           </a>
-          <a href="" class="btn btn-circle btn-ghost">
+          <a href="https://balad.ir/p/Ptp5Hc4Kk1tN6s" class="btn btn-circle btn-ghost">
             <img :src="baladIcon" alt="مسیریابی در بلد" class="h-8" />
           </a>
         </div>
