@@ -69,24 +69,24 @@ onBeforeUnmount(() => {
 
         <!-- لوگو -->
         <a href="/" class="btn btn-ghost normal-case text-xl">
-          <img :src="logo" alt="لوگو" class="h-7 md:h-10 w-auto" />
+          <img :src="logo" alt="لوگو" class="h-7 md:h-10 w-auto" loading="lazy" />
         </a>
 
         <div class="hidden lg:flex flex-horizental gap-2">
           <a href="http://www.instagram.com/dariushdecor.ir" class="btn btn-circle btn-ghost">
-            <img :src="instagramIcon" alt="ارتباط با ما در اینستاگرام" class="h-8" />
+            <img :src="instagramIcon" alt="ارتباط با ما در اینستاگرام" class="h-8" loading="lazy" />
           </a>
           <a href="https://divar.ir/pro/weMYJqef" class="btn btn-circle btn-ghost">
-            <img :src="divarIcon" alt="ارتباط با ما در دیوار" class="h-8" />
+            <img :src="divarIcon" alt="ارتباط با ما در دیوار" class="h-8" loading="lazy" />
           </a>
           <a href="tel:09127658701" class="btn btn-circle btn-ghost">
-            <img :src="PhoneIcon" alt="تماس با ما" class="h-8" />
+            <img :src="PhoneIcon" alt="تماس با ما" class="h-8" loading="lazy" />
           </a>
           <a href="https://nshn.ir/f2_bvTH6pxSrb5" class="btn btn-circle btn-ghost">
-            <img :src="neshanIcon" alt="مسیریابی در نشان" class="h-8" />
+            <img :src="neshanIcon" alt="مسیریابی در نشان" class="h-8" loading="lazy" />
           </a>
           <a href="https://balad.ir/p/Ptp5Hc4Kk1tN6s" class="btn btn-circle btn-ghost">
-            <img :src="baladIcon" alt="مسیریابی در بلد" class="h-8" />
+            <img :src="baladIcon" alt="مسیریابی در بلد" class="h-8" loading="lazy" />
           </a>
         </div>
       </div>

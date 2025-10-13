@@ -1,11 +1,11 @@
-import productKitchenHood from '../assets/images/product_Kitchen-hood.jpg'
-import productKitchenSink from '../assets/images/product_Kitchen-Sink.jpg'
-import productKitchenStove from '../assets/images/product_Kitchen-Stove.jpg'
-import productSecurityDoor from '../assets/images/product_Security-Door.jpg'
-import productInteriorDoor from '../assets/images/product_Interior-Door.jpg'
-import productReadyCabinet from '../assets/images/product_Ready-Cabinet.png'
-import productWallpaper from '../assets/images/product_wall-paper.jpg'
-import productCustom from '../assets/images/product_other.png'
+import productKitchenHood from '../assets/images/product_Kitchen-hood.webp'
+import productKitchenSink from '../assets/images/product_Kitchen-Sink.webp'
+import productKitchenStove from '../assets/images/product_Kitchen-Stove.webp'
+import productSecurityDoor from '../assets/images/product_Security-Door.webp'
+import productInteriorDoor from '../assets/images/product_Interior-Door.webp'
+import productReadyCabinet from '../assets/images/product_Ready-Cabinet.webp'
+import productWallpaper from '../assets/images/product_wall-paper.webp'
+import productCustom from '../assets/images/product_other.webp'
 
 export const productsData = [
   {

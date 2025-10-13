@@ -89,7 +89,7 @@ const dockItems = computed(() =>
     >
       <span class="flex size-[2.4em] items-center justify-center text-base-content">
         <template v-if="item.type === 'asset'">
-          <img :src="item.icon" :alt="item.alt || item.label" class="size-10" />
+          <img :src="item.icon" :alt="item.alt || item.label" class="size-10" loading="lazy" />
         </template>
         <component v-else :is="item.icon" class="size-6" />
       </span>

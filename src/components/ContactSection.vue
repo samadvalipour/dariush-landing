@@ -119,7 +119,7 @@ const quickActions = [
               <span
                 class="flex size-11 items-center justify-center rounded-2xl text-base-content">
                 <template v-if="action.type === 'asset'">
-                  <img :src="action.icon" :alt="action.label" class="size-10" />
+                  <img :src="action.icon" :alt="action.label" class="size-10" loading="lazy" />
                 </template>
                 <component v-else :is="action.icon" class="size-7" />
               </span>
