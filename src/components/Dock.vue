@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from "vue";
+import BaseLazyImage from "./BaseLazyImage.vue";
 import baladIcon from "../assets/svg/balad_bw.svg";
 import divarIcon from "../assets/svg/divar_bw.svg";
 import instagramIcon from "../assets/svg/instagram_bw.svg";
@@ -89,7 +90,7 @@ const dockItems = computed(() =>
     >
       <span class="flex size-[2.4em] items-center justify-center text-base-content">
         <template v-if="item.type === 'asset'">
-          <img :src="item.icon" :alt="item.alt || item.label" class="size-10" loading="lazy" />
+          <BaseLazyImage :src="item.icon" :alt="item.alt || item.label" class="size-10" />
         </template>
         <component v-else :is="item.icon" class="size-6" />
       </span>

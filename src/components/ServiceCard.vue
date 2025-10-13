@@ -3,11 +3,10 @@
     class="card h-full w-full bg-base-100 border border-gray-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-sm"
   >
     <figure class="h-48 w-full overflow-hidden rounded-t-2xl">
-      <img
+      <BaseLazyImage
         :src="image"
         :alt="title"
         class="h-full w-full object-cover"
-        loading="lazy"
       />
     </figure>
     <div class="card-body gap-3">
@@ -22,6 +21,8 @@
 </template>
 
 <script setup>
+import BaseLazyImage from './BaseLazyImage.vue'
+
 defineProps({
   title: {
     type: String,
