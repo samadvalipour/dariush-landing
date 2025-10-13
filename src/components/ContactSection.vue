@@ -1,5 +1,6 @@
 <script setup>
 
+import BaseLazyImage from "./BaseLazyImage.vue";
 import baladIcon from "../assets/svg/balad_rgb.svg";
 import divarIcon from "../assets/svg/divar_rgb.svg";
 import instagramIcon from "../assets/svg/instagram_rgb.svg";
@@ -119,7 +120,7 @@ const quickActions = [
               <span
                 class="flex size-11 items-center justify-center rounded-2xl text-base-content">
                 <template v-if="action.type === 'asset'">
-                  <img :src="action.icon" :alt="action.label" class="size-10" loading="lazy" />
+                  <BaseLazyImage :src="action.icon" :alt="action.label" class="size-10" />
                 </template>
                 <component v-else :is="action.icon" class="size-7" />
               </span>
