@@ -16,7 +16,9 @@ import heroImage from '../assets/hero.webp'
           با بهره‌گیری از طراحی‌های مدرن و متریال باکیفیت، فضایی ماندگار و دلنشین برای خانه یا محل کارتان
           خلق می‌کنیم.
         </p>
-        <a href= "/#contact" class="btn btn-secondary">مشاوره رایگان</a>
+        <a href="#contact" class="btn btn-secondary" aria-label="درخواست مشاوره رایگان دکوراسیون">
+          مشاوره رایگان
+        </a>
       </div>
     </div>
   </section>

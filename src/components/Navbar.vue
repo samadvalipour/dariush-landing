@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
         <button
           type="button"
           class="btn btn-ghost btn-circle lg:hidden"
-          aria-label="toggle navigation menu"
+          aria-label="باز و بسته کردن منوی ناوبری"
           @click="toggleMenu"
         >
           <svg
@@ -69,25 +69,49 @@ onBeforeUnmount(() => {
         </button>
 
         <!-- لوگو -->
-        <a href="/" class="btn btn-ghost normal-case text-xl">
-          <BaseLazyImage :src="logo" alt="لوگو" class="h-7 md:h-10 w-auto" />
+        <a href="/" class="btn btn-ghost normal-case text-xl" aria-label="بازگشت به صفحه اصلی دکوراسیون داریوش">
+          <BaseLazyImage :src="logo" alt="لوگوی دکوراسیون داریوش" class="h-7 md:h-10 w-auto" />
         </a>
 
         <div class="hidden lg:flex flex-horizental gap-2">
-          <a href="http://www.instagram.com/dariushdecor.ir" class="btn btn-circle btn-ghost">
-            <BaseLazyImage :src="instagramIcon" alt="ارتباط با ما در اینستاگرام" class="h-8" />
+          <a
+            href="https://www.instagram.com/dariushdecor.ir"
+            class="btn btn-circle btn-ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده صفحه اینستاگرام دکوراسیون داریوش"
+          >
+            <BaseLazyImage :src="instagramIcon" alt="صفحه اینستاگرام دکوراسیون داریوش" class="h-8" />
           </a>
-          <a href="https://divar.ir/pro/weMYJqef" class="btn btn-circle btn-ghost">
-            <BaseLazyImage :src="divarIcon" alt="ارتباط با ما در دیوار" class="h-8" />
+          <a
+            href="https://divar.ir/pro/weMYJqef"
+            class="btn btn-circle btn-ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده فروشگاه دکوراسیون داریوش در دیوار"
+          >
+            <BaseLazyImage :src="divarIcon" alt="صفحه دکوراسیون داریوش در دیوار" class="h-8" />
           </a>
-          <a href="tel:09127658701" class="btn btn-circle btn-ghost">
-            <BaseLazyImage :src="PhoneIcon" alt="تماس با ما" class="h-8" />
+          <a href="tel:09127658701" class="btn btn-circle btn-ghost" aria-label="تماس تلفنی با دکوراسیون داریوش">
+            <BaseLazyImage :src="PhoneIcon" alt="تماس تلفنی با دکوراسیون داریوش" class="h-8" />
           </a>
-          <a href="https://nshn.ir/f2_bvTH6pxSrb5" class="btn btn-circle btn-ghost">
-            <BaseLazyImage :src="neshanIcon" alt="مسیریابی در نشان" class="h-8" />
+          <a
+            href="https://nshn.ir/f2_bvTH6pxSrb5"
+            class="btn btn-circle btn-ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مسیریابی کارگاه دکوراسیون داریوش در نشان"
+          >
+            <BaseLazyImage :src="neshanIcon" alt="مسیریابی کارگاه داریوش در نشان" class="h-8" />
           </a>
-          <a href="https://balad.ir/p/Ptp5Hc4Kk1tN6s" class="btn btn-circle btn-ghost">
-            <BaseLazyImage :src="baladIcon" alt="مسیریابی در بلد" class="h-8" />
+          <a
+            href="https://balad.ir/p/Ptp5Hc4Kk1tN6s"
+            class="btn btn-circle btn-ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مسیریابی کارگاه دکوراسیون داریوش در بلد"
+          >
+            <BaseLazyImage :src="baladIcon" alt="مسیریابی کارگاه داریوش در بلد" class="h-8" />
           </a>
         </div>
       </div>
