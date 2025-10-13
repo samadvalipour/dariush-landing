@@ -44,7 +44,7 @@
           ></button>
         </div>
 
-        <div class="hidden w-full gap-6 rounded-2xl bg-base-100/70 p-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+        <div class="hidden w-full gap-6 rounded-2xl bg-base-100/70 p-6 sm:grid sm:grid-cols-2 lg:grid-cols-4">
           <ProductCard
             v-for="product in products"
             :key="product.title"
