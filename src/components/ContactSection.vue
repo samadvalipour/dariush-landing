@@ -53,7 +53,7 @@ const quickActions = [
   {
     id: "divar",
     label: "صفحه دیوار ما",
-    href: "https://divar.ir/",
+    href: "https://divar.ir/pro/weMYJqef",
     icon: divarIcon,
     type: "asset",
   },
