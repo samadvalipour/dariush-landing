@@ -50,7 +50,7 @@ const props = defineProps({
       {
         id: "phone",
         label: "تماس تلفنی",
-        href: "tel:09123456789",
+        href: "tel:09127658701",
         icon: PhoneIcon,
         alt: "تماس تلفنی مستقیم",
         type: "component",
