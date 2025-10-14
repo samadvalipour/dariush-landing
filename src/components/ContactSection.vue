@@ -11,7 +11,7 @@ const contactDetails = [
   {
     id: "phone",
     label: "تلفن تماس مستقیم",
-    value: "0912 765 8701",
+    value: "09127658701",
     href: "tel:09127658701",
     icon: PhoneIcon,
   },
