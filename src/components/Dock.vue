@@ -14,7 +14,7 @@ const props = defineProps({
       {
         id: "neshan",
         label: "مسیر در نشان",
-        href: "https://neshan.org/maps/places/dariush-decor",
+        href: "https://nshn.ir/f2_bvTH6pxSrb5",
         icon: neshanIcon,
         alt: "مسیر کارگاه در نشان",
         type: "asset",
@@ -23,7 +23,7 @@ const props = defineProps({
       {
         id: "balad",
         label: "مسیر در بلد",
-        href: "https://balad.ir/p/dariush-decor",
+        href: "https://balad.ir/p/Ptp5Hc4Kk1tN6s",
         icon: baladIcon,
         alt: "مسیر کارگاه در بلد",
         type: "asset",
@@ -32,7 +32,7 @@ const props = defineProps({
       {
         id: "instagram",
         label: "اینستاگرام",
-        href: "https://www.instagram.com/",
+        href: "http://www.instagram.com/dariushdecor.ir",
         icon: instagramIcon,
         alt: "صفحه اینستاگرام داریوش",
         type: "asset",
@@ -41,7 +41,7 @@ const props = defineProps({
       {
         id: "divar",
         label: "دیوار",
-        href: "https://divar.ir/",
+        href: "https://divar.ir/pro/weMYJqef",
         icon: divarIcon,
         alt: "صفحه دیوار داریوش",
         type: "asset",
