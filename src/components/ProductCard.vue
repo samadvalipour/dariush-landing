@@ -11,7 +11,7 @@
         <h3 class="card-title justify-start text-2xl font-bold text-base-content">
           {{ title }}
         </h3>
-        <p class="text-base leading-relaxed text-base-content/70">
+        <p class="text-base leading-relaxed text-base-content/70 text-justify">
           {{ desc }}
         </p>
       </div>
